@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Hassan",
+    "role": "Developer",
+    "salary": 120000,
+    "remote": true
+  },
+  {
+    "id": 2,
+    "name": "Fatima",
+    "role": "Data Analyst",
+    "salary": 110000,
+    "remote": false
+  },
+  {
+    "id": 3,
+    "name": "Bilal",
+    "role": "ML Engineer",
+    "salary": 150000,
+    "remote": true
+  }
+]

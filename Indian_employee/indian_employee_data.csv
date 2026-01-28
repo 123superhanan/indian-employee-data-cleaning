@@ -1,0 +1,50 @@
+EmployeeID,Name,Age,Department,City,Salary,ExperienceYears,JoinDate
+201,Rahul Sharma,28,IT,Bangalore,65000,4,2019-06-12
+202,Priya Verma,32,HR,Delhi,NaN,7,2016/08/01
+203,Amit Patel,26,Finance,Ahmedabad,48000,2,20121-03-15
+204,Neha Singh,35,IT,Noida,82000,10,2013-11-09
+205,Rohit Mehta,41,Operations,Mumbai,90000,15,2008-04-21
+206,Anjali Rao,29,Marketing,Hyderabad,NaN,5,2018-07-30
+207,Karan Malhotra,24,it,Pune,42000,1,2022-01-05
+208,Sneha Iyer,38,Finance,Chennai,88000,12,2010-09-17
+209,Arjun Kapoor,31,Sales,Gurgaon,70000,6,2017-12-01
+210,Pooja Nair,27,HR,Kochi,50000,3,2019-05-14
+211,Aman Ali,34,IT,Bangalor,78000,9,2014-10-10
+212,Farah Khan,29,Hr,Delhi,54000,NaN,2018/03/22
+213,Vikas Jain,45,Finance,Mumbai,150000,20,2003-06-11
+214,Nidhi Gupta,23,IT,Noida,35000,0,2023-02-01
+215,Sahil Verma,37,Sales,Delhi,83000,11,2012-07-19
+216,Reema Paul,42,Operations,Kolkata,98000,18,2006-01-30
+217,Imran Sheikh,30,IT,Hyderabad,69000,5,2017-04-18
+218,Kavita Joshi,28,HR,Jaipur,51000,4,2019-09-07
+219,Raj Malhotra,33,Sales,Gurugram,72000,8,2015-11-25
+220,Sunita Rani,39,Finance,Chandigarh,87000,13,2011-05-03
+221,Ayaan Khan,26,IT,Pune,46000,2,2021-08-16
+222,Mehul Shah,48,Operations,Mumb@i,120000,25,1999-12-12
+223,Divya Arora,31,Marketing,Delhi,64000,6,2016-06-06
+224,Naveen Kumar,36,IT,Bangalore,81000,10,2013-03-29
+225,Pallavi Desai,29,finance,Ahmedabad,59000,4,2019-01-15
+226,Rishabh Tyagi,27,IT,,47000,3,2020-07-07
+227,Tanvi Kulkarni,34,HR,Pune,60000,9,2014-09-01
+228,Suresh Yadav,52,Operations,Lucknow,110000,30,1995-05-20
+229,Alisha Mirza,25,Sales,Delhi,41000,1,2022-10-10
+230,Manish Goel,44,Finance,Noida,102000,17,2007-02-02
+231,Ritu Saxena,28,HR,Ghaziabad,52000,4,2019-11-11
+232,Deepak Rawat,35,IT,Dehradun,76000,9,2014-08-08
+233,Neelam Chawla,41,Sales,Delhi,NaN,15,2008-03-17
+234,Yash Thakur,22,IT,Pune,30000,NaN,2023-06-01
+235,Pankaj Mishra,39,Operations,Bhopal,-89000,14,2010-10-21
+236,Isha Kapoor,33,Marketing,Mumbai,68000,7,2016-04-04
+237,Faizan Noor,29,it,Hyderabad,61000,5,2018-12-19
+238,Kriti Bansal,27,HR,Delhi,48000,3,2020-02-14
+239,Shubham Jain,31,Finance,Indore,67000,6,2017-07-27
+240,Rajni Kumari,45,Operations,Patna,-95000,22,2001-01-01
+241,Sameer Khan,38,Sales,Delhi,84000,12,2011-09-09
+242,Aarti Mehta,26,IT,Bangalore,49000,2,2021-05-05
+201,Rahul Sharma,28,IT,Bangalore,65000,4,2019-06-12
+205,Rohit Mehta,41,Operations,Mumbai,90000,15,2008-04-21
+243,Unknown,NaN,IT,Delhi,inf,NaN,
+244,,35,HR,Mumbai,55000,8,2015-05-05
+245,Salman Qureshi,NaN,Sales,,62000,7,2016-11-11
+246,Neha Singh,35,IT,Noida,82000,10,2013-11-09
+

@@ -1,0 +1,223 @@
+# Pandas & Python Learning Sheet
+
+This document restructures your entire script into a clean, topic‑wise learning reference. Think of it as a personal playbook you can revise before exams, interviews, or ML projects.
+
+---
+
+## 1. Creating a DataFrame
+
+### Purpose
+
+Used to create tabular data for analysis and processing.
+
+### Method
+
+```python
+import pandas as pd
+
+data = {
+    'Name': ["Ali", "None", "Ahmed", "Ayesha", "Usman"],
+    'Age': [20, 35, 19, 19, 20],
+    'Department': ["CS", "CS", "CS", "AI", "SE"],
+    'GPA': [3.5, 2.6, 3.4, 3.2, 2.9]
+}
+
+df = pd.DataFrame(data)
+```
+
+Key insight
+• DataFrame is the core pandas object
+• Columns can be numeric or categorical
+
+---
+
+## 2. Viewing Data
+
+### Methods
+
+```python
+print(df)
+df.head()
+df.tail()
+df.info()
+```
+
+Use case
+• Quick inspection
+• Schema validation
+• Debugging pipelines
+
+---
+
+## 3. Sorting Data
+
+### Sorting by Column
+
+```python
+df.sort_values(by='GPA', ascending=False, inplace=True)
+```
+
+Key insight
+• Sorting is commonly used for ranking
+• inplace modifies the original DataFrame
+
+---
+
+## 4. Handling Missing Data
+
+### Checking Missing Values
+
+```python
+df.isnull()
+df.isnull().sum()
+```
+
+### Filling Numeric Columns with Mean
+
+```python
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+df['GPA'] = df['GPA'].fillna(df['GPA'].mean())
+```
+
+### Filling Categorical Columns with Mode
+
+```python
+df['Name'] = df['Name'].fillna(df['Name'].mode()[0])
+df['Department'] = df['Department'].fillna(df['Department'].mode()[0])
+```
+
+### Interpolating Numeric Data
+
+```python
+df['Age'] = df['Age'].interpolate(method='linear')
+df['GPA'] = df['GPA'].interpolate(method='linear')
+```
+
+Strategic note
+• Interpolation works only on numeric columns
+• Avoid inplace with chained assignment
+
+---
+
+## 5. Adding Columns
+
+### Insert Column at Specific Position
+
+```python
+df.insert(0, 'ID', [101, 102, 103, 104, 105])
+```
+
+### Derived Columns
+
+```python
+df['award'] = df['GPA'] * 10
+df['Toppers'] = df['GPA'] > 3.5
+```
+
+Business use
+• Feature engineering
+• Flags and labels
+
+---
+
+## 6. Updating and Removing Data
+
+### Update a Cell
+
+```python
+df.loc[0, 'Name'] = 'Ali Reza'
+```
+
+### Drop Column
+
+```python
+df.drop(columns=['Age'], inplace=True)
+```
+
+### Drop Rows with Missing Values
+
+```python
+df.dropna(inplace=True)
+```
+
+---
+
+## 7. Filtering Data
+
+### Conditional Filtering
+
+```python
+high_gpa = df[df['GPA'] > 3.5]
+```
+
+### Multiple Conditions
+
+```python
+filtered_df = df[(df['Department'] == 'CS') & (df['GPA'] > 3.0)]
+```
+
+Used in
+• Analytics
+• ML dataset slicing
+
+---
+
+## 8. Importing and Exporting Data
+
+### Export
+
+```python
+df.to_csv('output.csv', index=False)
+df.to_excel('output.xlsx', index=False)
+```
+
+### Import
+
+```python
+df = pd.read_csv('students_data.csv', encoding='latin-1')
+df = pd.read_excel('sales_report.xlsx')
+```
+
+Enterprise insight
+• Encoding issues are common in real datasets
+
+---
+
+## 9. Python Fundamentals Used
+
+### Math Module
+
+```python
+import math
+math.sqrt(64)
+```
+
+### Tuples
+
+```python
+thistuple = ('apple', 'banana', 'cherry')
+for i in range(len(thistuple)):
+    print(thistuple[i])
+```
+
+### Classes and Objects
+
+```python
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+    def multiply(self, a, b):
+        return a * b
+```
+
+---
+
+## 10. Professional Takeaways
+
+• Pandas is strict by design
+• Explicit assignment beats inplace magic
+• Separate numeric and categorical logic
+• This structure mirrors real ML pipelines
+
+This sheet is now revision ready, interview safe, and ML compatible.
