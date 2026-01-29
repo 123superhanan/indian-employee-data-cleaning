@@ -1,6 +1,11 @@
-student_id,name,age,department,gpa
-101,Hanan,20,CS,3.5
-102,Humza,21,SE,3.8
-103,Ahmed,19,CS,3.2
-104,Ayesha,22,AI,3.9
-105,Ahmed,20,SE,2.9
+student_id,name,age,gender,department,city,gpa,internship
+101,Hanan,20,Male,CS,Lahore,3.5,Yes
+102,Humza,21,Male,SE,Karachi,3.8,Yes
+103,Ahmed,19,Male,CS,Lahore,3.2,No
+104,Ayesha,22,Female,AI,Islamabad,3.9,Yes
+105,Ahmed,20,Female,SE,Karachi,2.9,No
+106,Sara,21,Female,CS,,3.6,Yes
+107,Ali,23,Male,AI,Lahore,2.8,No
+108,Zara,20,Female,SE,Islamabad,3.7,Yes
+109,Usman,22,Male,CS,Lahore,,No
+110,Hira,19,Female,AI,Karachi,3.4,Yes
