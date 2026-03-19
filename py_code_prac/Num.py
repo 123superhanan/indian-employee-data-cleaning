@@ -1,45 +1,45 @@
 import numpy as np
 
-# create a numpy array
-# arr = np.array([1, 2, 3, 4, 5])
-# x = arr.copy()
-# arr[0] = 42
-# print(arr)
-# print(x)
+#create a numpy array
+arr = np.array([1, 2, 3, 4, 5])
+x = arr.copy()
+arr[0] = 42
+print(arr)
+print(x)
 
 #create a  array fill zero
-# zerosArray = np.zeros(3)
-# print(zerosArray)
+zerosArray = np.zeros(3)
+print(zerosArray)
 
 #create a  array fill onces
-# onceArray = np.ones((2,3))
-# print(onceArray)
+onceArray = np.ones((2,3))
+print(onceArray)
 
 #create a  array with a specific value
-# fullArray = np.full((2,3),7) #shape , value
-# print(fullArray)
+fullArray = np.full((2,3),7) #shape , value
+print(fullArray)
 
 
 #creating sequence of numbers
-# seqArray = np.arange(1,11,1) #start stop step
-# print(seqArray)
+seqArray = np.arange(1,11,1) #start stop step
+print(seqArray)
 
-# #calculating identity matrix
-# identityMatrix = np.eye(4) #size
-# print(identityMatrix)
+#calculating identity matrix
+identityMatrix = np.eye(4) #size
+print(identityMatrix)
 
 
 #array propeties and Operations
-# arr = np.array([[1, 2, 3], [4, 5, 6]])
-# print("Array Shape: ", arr.shape)
-# print("Array Size: ", arr.size)
-# print("Array Data Type: ", arr.dtype)
-# print("Array Dimensions: ", arr.ndim)
-# print("Array Item Size (in bytes): ", arr.itemsize)
-# print("Array Total Bytes: ", arr.nbytes)
-# print("Array Transpose: \n", arr.T)
-# print("Array Reshaped (3x2): \n", arr.reshape(3, 2))
-# print("Array Flattened: ", arr.flatten())
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+print("Array Shape: ", arr.shape)
+print("Array Size: ", arr.size)
+print("Array Data Type: ", arr.dtype)
+print("Array Dimensions: ", arr.ndim)
+print("Array Item Size (in bytes): ", arr.itemsize)
+print("Array Total Bytes: ", arr.nbytes)
+print("Array Transpose: \n", arr.T)
+print("Array Reshaped (3x2): \n", arr.reshape(3, 2))
+print("Array Flattened: ", arr.flatten())
 
 # #real life examples of numpy
 # # example plants disese detction data

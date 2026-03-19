@@ -52,56 +52,59 @@ print('rmse: ',rmse)
 
 
 
+from sklearn.metrics import accuracy_score, precision_score,recall_score,f1_score
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import mean_absolute_error,mean_squared_error
+import numpy as np
+from sklearn.tree import DecisionTreeClassifier
+import numpy as np
 
-# from sklearn.tree import DecisionTreeClassifier
-# import numpy as np
+# Features: [fever, cough, headache, fatigue]
+X = np.array([
+    [37.5, 1, 0, 0],   # Cold
+    [38.0, 1, 1, 1],   # Flu
+    [39.0, 1, 1, 1],   # COVID
+    [36.8, 0, 0, 0],   # Healthy / cold
+    [38.5, 1, 1, 1],   # Flu
+    [39.5, 1, 1, 1],   # COVID
+    [37.2, 1, 0, 0],   # Cold
+])
 
-# # Features: [fever, cough, headache, fatigue]
-# X = np.array([
-#     [37.5, 1, 0, 0],   # Cold
-#     [38.0, 1, 1, 1],   # Flu
-#     [39.0, 1, 1, 1],   # COVID
-#     [36.8, 0, 0, 0],   # Healthy / cold
-#     [38.5, 1, 1, 1],   # Flu
-#     [39.5, 1, 1, 1],   # COVID
-#     [37.2, 1, 0, 0],   # Cold
-# ])
+# Labels
+y = np.array([0, 1, 2, 0, 1, 2, 0])
 
-# # Labels
-# y = np.array([0, 1, 2, 0, 1, 2, 0])
+disease_map = {
+    0: "Common Cold",
+    1: "Flu",
+    2: "COVID-like Infection"
+}
 
-# disease_map = {
-#     0: "Common Cold",
-#     1: "Flu",
-#     2: "COVID-like Infection"
-# }
+advice = {
+    0: "Rest, fluids, monitor symptoms",
+    1: "Consult doctor, possible medication",
+    2: "Isolate and seek medical testing"
+}
 
-# advice = {
-#     0: "Rest, fluids, monitor symptoms",
-#     1: "Consult doctor, possible medication",
-#     2: "Isolate and seek medical testing"
-# }
+# Train Decision Tree
+model = DecisionTreeClassifier(
+    criterion="entropy",
+    max_depth=4,
+    random_state=42
+)
 
-# # Train Decision Tree
-# model = DecisionTreeClassifier(
-#     criterion="entropy",
-#     max_depth=4,
-#     random_state=42
-# )
+model.fit(X, y)
 
-# model.fit(X, y)
+# User input
+fever = float(input("Enter body temperature (°C): "))
+cough = int(input("Cough? (1 = Yes, 0 = No): "))
+headache = int(input("Headache? (1 = Yes, 0 = No): "))
+fatigue = int(input("Fatigue? (1 = Yes, 0 = No): "))
 
-# # User input
-# fever = float(input("Enter body temperature (°C): "))
-# cough = int(input("Cough? (1 = Yes, 0 = No): "))
-# headache = int(input("Headache? (1 = Yes, 0 = No): "))
-# fatigue = int(input("Fatigue? (1 = Yes, 0 = No): "))
+prediction = model.predict([[fever, cough, headache, fatigue]])[0]
 
-# prediction = model.predict([[fever, cough, headache, fatigue]])[0]
-
-# print("\n--- Disease Prediction Result ---")
-# print(f"Predicted condition: {disease_map[prediction]}")
-# print(f"Advice: {advice[prediction]}")
+print("\n--- Disease Prediction Result ---")
+print(f"Predicted condition: {disease_map[prediction]}")
+print(f"Advice: {advice[prediction]}")
 
 
 

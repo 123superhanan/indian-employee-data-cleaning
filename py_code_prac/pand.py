@@ -156,25 +156,25 @@ print(df_concate)
 
 
 
-# data={
-#     'Name':["Ali","Sara","Ahmed","Ayesha","Usman"],
-#     'Age':[20,21,19,22,20],
-#     'Department':["CS","SE","CS","AI","SE"],
-#     'GPA':[3.5,3.8,3.4,3.2,2.9]
-# }
+data={
+    'Name':["Ali","Sara","Ahmed","Ayesha","Usman"],
+    'Age':[20,21,19,22,20],
+    'Department':["CS","SE","CS","AI","SE"],
+    'GPA':[3.5,3.8,3.4,3.2,2.9]
+}
 
-# df = pd.DataFrame(data)
-# df.insert(0, 'ID', [101,102,103,104,105])
-# print(df)
+df = pd.DataFrame(data)
+df.insert(0, 'ID', [101,102,103,104,105])
+print(df)
 
-# df.loc[0,'Name'] = 'Ali reza'
-# df.drop(columns=['Age'], inplace=True)
-# print(df)
-# print('award for students with GPA > 3.5:')
-# df["award"] = df["GPA"]  * 10
-# print(df)
-# df["Toppers"] = df["GPA"]> 3.5
-# print('the data with column toppers added:')
+df.loc[0,'Name'] = 'Ali reza'
+df.drop(columns=['Age'], inplace=True)
+print(df)
+print('award for students with GPA > 3.5:')
+df["award"] = df["GPA"]  * 10
+print(df)
+df["Toppers"] = df["GPA"]> 3.5
+print('the data with column toppers added:')
 
 
 
